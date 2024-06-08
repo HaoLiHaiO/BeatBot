@@ -3,6 +3,6 @@
 
 #include <stddef.h>
 
-void getRandomChord(char *command, size_t size);
+void getRandomChord(char *command, size_t size, float duration);
 
 #endif // GET_RANDOM_CHORD_H

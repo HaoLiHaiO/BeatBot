@@ -5,9 +5,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-void getRandomChord(char *command, size_t size) {
-    int tempo = 120;
-
+void getRandomChord(char *command, size_t size, float duration) {
     int frequencies[] = {
         getRandomFrequency(),
         getRandomFrequency(),
@@ -17,9 +15,10 @@ void getRandomChord(char *command, size_t size) {
         getRandomFrequency()
     };
 
-    float duration = getRandomDuration(tempo);
-
-    snprintf(command, size, "sox -n synth pl %d pl %d pl %d pl %d pl %d pl %d", 
-             frequencies[0], frequencies[1], frequencies[2], 
-             frequencies[3], frequencies[4], frequencies[5]);
+    int ret = snprintf(command, size, "synth %.2f pl %d pl %d pl %d pl %d pl %d pl %d", 
+                       duration, frequencies[0], frequencies[1], frequencies[2], 
+                       frequencies[3], frequencies[4], frequencies[5]);
+    if (ret < 0 || ret >= size) {
+        fprintf(stderr, "Chord command buffer too small or snprintf error!\n");
+    }
 }
