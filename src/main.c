@@ -1,15 +1,15 @@
-#include "generate-sound.h"
+#include "gen-rand-sound.h"
 #include "play-sound.h"
 
 int main() {
-    generateSound("noteA.wav", 440); // A4
+    generateRandomSound("noteA.wav");
     playSound("noteA.wav");
-    generateSound("noteB.wav", 494); // B4
+    generateRandomSound("noteB.wav");
     playSound("noteB.wav");
-    generateSound("noteC.wav", 523); // C5
+    generateRandomSound("noteC.wav");
     playSound("noteC.wav");
 
-    generateSound("hello.wav", 700);
+    generateRandomSound("hello.wav");
     playSound("hello.wav");
     return 0;
 }
