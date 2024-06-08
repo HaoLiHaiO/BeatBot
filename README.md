@@ -14,7 +14,7 @@ A random tune generator.
 3. Run the following command to compile the project:
 
 ```sh
-gcc -o beatbot main.c -lSDL2
+make
 ```
 
 ## How to run
