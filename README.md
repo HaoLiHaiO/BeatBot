@@ -23,6 +23,22 @@ make
 ./beatbot
 ```
 
+## Docker
+
+### Build container
+
+```sh
+docker build -t beatbot .
+```
+
+### Run
+
+```sh
+chmod +x run_beatbot.sh
+./run_beatbot.sh
+```
+
+
 ## How it works
 
 - uses SoX to generate sounds dynamically
