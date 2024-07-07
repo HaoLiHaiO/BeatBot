@@ -1,3 +1,9 @@
+<a href="https://scan.coverity.com/projects/haolihaio-beatbot">
+  <img alt="Coverity Scan Build Status"
+       src="https://scan.coverity.com/projects/30475/badge.svg"/>
+</a>
+<br>
+
 # BeatBot
 
 A random tune generator.
